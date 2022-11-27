@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const db = require('./Develop/db/db.json')
+const db = require('./db/db.json')
 // uuid variable from npm node package
 const { v4: uuidv4 } = require('uuid');
 
