@@ -25,7 +25,15 @@ app.get('/notes', (req, res) =>
 
 // API Get  Route
 app.get('/api/notes', (req, res) => {
-    res.json(db);
+    console.info(`${req.method} request received to get notes`);
+
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        res.json(JSON.parse(data))
+      }
+    });
   });
 
 
