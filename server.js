@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const db = require('./db/db.json')
+
 // uuid variable from npm node package
 const { v4: uuidv4 } = require('uuid');
 
@@ -53,7 +53,7 @@ app.get('/api/notes', (req, res) => {
         review_id: uuidv4(),
       };
   
-      fs.readFile('/api/notes', 'utf8', (err, data) => {
+      fs.readFile('./db/db.json', 'utf8', (err, data) => {
         if (err) {
           console.error(err);
         } else {
@@ -63,7 +63,7 @@ app.get('/api/notes', (req, res) => {
         
     
       // Write the string to a file
-      fs.writeFile(`/api/notes`,
+      fs.writeFile(`./db/db.json`,
        JSON.stringify(parsedReviews),
        (writeErr) => 
        writeErr
