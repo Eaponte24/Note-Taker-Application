@@ -50,7 +50,7 @@ app.get('/api/notes', (req, res) => {
       const newNote = {
         title,
         text,
-        review_id: uuid(),
+        review_id: uuidv4(),
       };
   
       fs.readFile('/api/notes', 'utf8', (err, data) => {
