@@ -15,11 +15,11 @@ app.use(express.static('public'));
 
 // HTML get Routes
 app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/index.html'))
+  res.sendFile(path.join(__dirname, '/Develop/public/index.html'))
 );
 
 app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/notes.html'))
+  res.sendFile(path.join(__dirname, '/Develop/public/notes.html'))
 );
 
 
