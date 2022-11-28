@@ -4,6 +4,7 @@ const fs = require('fs');
 
 // uuid variable from npm node package
 const { v4: uuidv4 } = require('uuid');
+const { userInfo } = require('os');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -50,7 +51,7 @@ app.get('/api/notes', (req, res) => {
       const newNote = {
         title,
         text,
-        review_id: uuidv4(),
+        id: uuidv4(),
       };
   
       fs.readFile('./db/db.json', 'utf8', (err, data) => {
@@ -84,6 +85,21 @@ app.get('/api/notes', (req, res) => {
       res.status(500).json('Error in posting Note');
     }
   });
+
+  // delete route 
+  app.delete("/api/notes/:id", (req, res) => {
+    console.info(`${req.method} request received to delete a note`);
+
+        let db = JSON.parse(fs.readFileSync('./db/db.json'))
+        
+        
+        let deleteNotes = db.filter(item => item.id !== req.params.id);
+       
+       
+        fs.writeFileSync('./db/db.json', JSON.stringify(deleteNotes));
+        res.json(deleteNotes);
+        
+      })
 
 
   app.listen(PORT, () =>
