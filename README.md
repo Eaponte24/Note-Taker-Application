@@ -1,23 +1,20 @@
-# Note Taker Starter Code
-
-https://shielded-wildwood-22466.herokuapp.com/ - Heroku url
-
-# Team-Profile-Generator
-
+# Note-Taker-App
 
 ## Description
 
-With this appilication, ive come up with a quick and easy solution to keep track of all of your teammates on your development team. Using this youll easily be able to add who is on your team, their emails, githubs and office numbers depending on their roles! They are cleanly organized on a html page that is created once you have answered the questions in the terminal.
+I've created an easy and efficient way to take and store your notes, as well as delete them. With this app you'll be able to easy access your notes youve taken and easily add them or delete certain ones! 
 
 ## Usage
 
-To start this application call you need to do is run a node start in the terminal and you will be prompted with questions pertaining to your role first. Once you have answered your questions then you will be asked if you want to add another member, if you choose to then you can add more and more team members and their roles. Once you choose to "create team" a HTML page will be generated for you along with a CSS sheet that is already in the dist folder.
+In order to use this app you will first just direct to the deployed app page and click on the get started button, you will then be brought over to the notes page. Within the notes page you will be able to add, view and delete your notes that youve stored! You can delete them one by one no matter what order all with just one click of the delete button. To add a note you will write in the title and description box and click the save icon in the top right.
 
-![Team Profile Generator Final Product](./Screenshots/Team-Profile-Generator(1).PNG)
+![Note Taker App Home Page](/screenshots/Note-Taker-Application(1).PNG)
+![Note Taker App Notes Page](/screenshots/Note-Taker-Application(2).PNG)
+![Note Taker App Notes with tests page](/screenshots/Note-Taker-Application(3).PNG)
 
-https://drive.google.com/file/d/1xL3cVWwlND34TQ1sOKm0lowIqlee3idc/view - Video link to how to use this program.
+https://shielded-wildwood-22466.herokuapp.com/ - Heroku url to deployed app
 
 
 ## Features
 
-Some features that I've included in this application are that all links are useable and will bring you to the corresponding links. Also when a new team member is created they will have their own card on the page so they are neatly organized. Along with this, ive added the needed tests for all of my functions to run properly and for continued development on the project.
+The notes that you want to keep will be stored on the page whenever you want to save them for later, as well if youre done with a note, you can just delete it with a click of a button. You can also view each note to see the description on that note for later when you need to reference it!
